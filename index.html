@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Distrito Sushi · Street food & bar · Traiguén</title>
+<meta name="description" content="Alta fusión Nikkei y mixología en Traiguén. Salón y delivery. Santa Cruz 1120.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --black:#0B0A08; --coal:#15130F; --card:#1B1813; --gold:#C9A25A; --gold2:#E6C98B; --cream:#F1E7D3; --mute:#A89F8C;
+  --display:'Cormorant Garamond',Georgia,serif; --body:'Jost',system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--body);background:var(--black);color:var(--cream);line-height:1.6;font-size:17px;
+  padding-top:env(safe-area-inset-top,0px);padding-bottom:calc(72px + env(safe-area-inset-bottom,0px))}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+.wrap{max-width:1020px;margin:0 auto;padding:0 22px}
+h1,h2,h3{font-family:var(--display);font-weight:600;line-height:1.05}
+.eyebrow{font-size:12px;letter-spacing:5px;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:14px}
+nav{display:flex;justify-content:space-between;align-items:center;padding:20px 0}
+.logo{font-family:var(--display);font-weight:700;font-size:26px;letter-spacing:3px;text-transform:uppercase;color:var(--gold2);text-decoration:none}
+.logo small{display:block;font-family:var(--body);font-size:9px;letter-spacing:4px;color:var(--mute);font-weight:500}
+nav a.r{font-size:13px;letter-spacing:2px;text-transform:uppercase;text-decoration:none;border:1px solid var(--gold);color:var(--gold2);padding:9px 18px}
+nav a.r:hover{background:var(--gold);color:var(--black)}
+.hero{text-align:center;padding:60px 0 80px;background:radial-gradient(ellipse at 50% 0,#2a2214 0,var(--black) 65%)}
+.hero h1{font-size:clamp(46px,10vw,98px);font-weight:600;max-width:14ch;margin:0 auto}
+.hero h1 em{color:var(--gold2);font-style:italic}
+.hero p{max-width:46ch;margin:20px auto 30px;color:var(--mute);font-size:18px}
+.open{display:inline-block;border:1px solid var(--gold);padding:22px 30px;margin-bottom:30px}
+.open b{display:block;font-family:var(--display);font-size:22px;letter-spacing:3px;text-transform:uppercase;color:var(--gold2);font-weight:600}
+.open span{color:var(--mute);font-size:14px;letter-spacing:1px}
+.count{display:flex;gap:22px;justify-content:center;margin-top:14px;font-family:var(--display)}
+.count div{text-align:center}
+.count strong{display:block;font-size:42px;line-height:1;color:var(--cream)}
+.count small{font-family:var(--body);font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--mute)}
+.btn{display:inline-block;padding:14px 28px;font-size:13px;letter-spacing:3px;text-transform:uppercase;text-decoration:none;font-weight:500;
+  background:var(--gold);color:var(--black);border:1px solid var(--gold);cursor:pointer;font-family:inherit}
+.btn:hover{background:var(--gold2)}
+.btn.line{background:transparent;color:var(--gold2)}
+.btn.line:hover{background:var(--gold);color:var(--black)}
+.sec{padding:72px 0}
+.sec h2{font-size:clamp(34px,6vw,52px);margin-bottom:10px}
+.sub{max-width:50ch;color:var(--mute);margin-bottom:36px}
+.alt{background:var(--coal)}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.card{background:var(--card);border:1px solid #2b261c;padding:28px}
+.card h3{font-size:28px;color:var(--gold2);margin-bottom:8px}
+.card p{color:var(--mute);font-size:16px}
+.drinks{display:grid;grid-template-columns:repeat(2,1fr);gap:0 40px;list-style:none;padding:0}
+.drinks li{padding:16px 0;border-bottom:1px solid #2b261c;display:flex;justify-content:space-between;gap:14px;align-items:baseline}
+.drinks b{font-family:var(--display);font-size:25px;font-weight:600;color:var(--cream)}
+.drinks span{color:var(--mute);font-size:14px;text-align:right}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:center}
+.info p{margin-bottom:6px}
+.info b{color:var(--gold2);font-weight:500}
+.form{background:var(--card);border:1px solid #2b261c;padding:28px;display:grid;gap:14px}
+label{font-size:13px;letter-spacing:2px;text-transform:uppercase;color:var(--mute);display:grid;gap:6px}
+input,select,textarea{font:inherit;font-size:16px;color:var(--cream);background:var(--black);border:1px solid #3a3326;padding:12px 14px;letter-spacing:0;text-transform:none}
+input:focus,select:focus,textarea:focus{border-color:var(--gold);outline:0}
+footer{padding:30px 0;text-align:center;color:var(--mute);font-size:13px;letter-spacing:2px;text-transform:uppercase;border-top:1px solid #2b261c}
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:20;background:var(--gold);padding:12px 16px calc(12px + env(safe-area-inset-bottom,0px))}
+.bar a{display:block;text-align:center;color:var(--black);text-decoration:none;font-size:14px;letter-spacing:3px;text-transform:uppercase;font-weight:600}
+@media(min-width:900px){.bar{display:none}body{padding-bottom:0}}
+@media(max-width:780px){.grid,.two,.drinks{grid-template-columns:1fr}.count{gap:14px}.count strong{font-size:34px}.open{padding:18px 18px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <nav>
+    <a class="logo" href="#">Distrito Sushi<small>STREET FOOD AND BAR</small></a>
+    <a class="r" href="#reservas">Reservar</a>
+  </nav>
+</div>
+
+<header class="hero"><div class="wrap">
+  <span class="eyebrow">Alta fusión Nikkei · Mixología</span>
+  <h1>Sabores del mundo, <em>en Traiguén</em></h1>
+  <p>Sushi de fusión nikkei, street food y coctelería de autor. En nuestro salón o en tu casa con delivery.</p>
+  <div class="open">
+    <b>Gran apertura · Jueves 19 de noviembre</b>
+    <span>Desde las 16:00 hrs · Santa Cruz 1120, Traiguén</span>
+    <div class="count" id="count" aria-live="off">
+      <div><strong id="d">0</strong><small>Días</small></div>
+      <div><strong id="h">0</strong><small>Horas</small></div>
+      <div><strong id="m">0</strong><small>Min</small></div>
+    </div>
+  </div>
+  <div>
+    <a class="btn" href="#reservas">Reservar mesa</a>
+    <a class="btn line" href="#carta">Ver la carta</a>
+  </div>
+</div></header>
+
+<section class="sec alt" id="carta"><div class="wrap">
+  <span class="eyebrow">La carta</span>
+  <h2>Cocina de fusión</h2>
+  <p class="sub">Una selección de lo que encontrarás. La carta completa con precios, muy pronto.</p>
+  <div class="grid">
+    <div class="card"><h3>Sushi nikkei</h3><p>Rolls y piezas que mezclan la técnica japonesa con ingredientes y toques peruanos.</p></div>
+    <div class="card"><h3>Street food</h3><p>Platos para compartir, rápidos y llenos de sabor, para comer en el salón o en casa.</p></div>
+    <div class="card"><h3>Para compartir</h3><p>Tablas y combos pensados para ir en grupo y probar un poco de todo.</p></div>
+  </div>
+</div></section>
+
+<section class="sec" id="bar"><div class="wrap">
+  <span class="eyebrow">El bar</span>
+  <h2>Mixología de la casa</h2>
+  <p class="sub">Cócteles de autor, con el gin de la casa como protagonista.</p>
+  <ul class="drinks">
+    <li><b>Daikiri Distrito</b><span>Cítrico y espumoso</span></li>
+    <li><b>Cold brew Negroni</b><span>Café y amargo</span></li>
+    <li><b>Distrito Gin</b><span>El gin de la casa</span></li>
+    <li><b>Sangría Tinta</b><span>Del Distrito</span></li>
+    <li><b>Catedrales</b><span>Distrito</span></li>
+    <li><b>Flor comestible</b><span>Tónica y frutos rojos</span></li>
+  </ul>
+</div></section>
+
+<section class="sec alt"><div class="wrap two">
+  <div class="info">
+    <span class="eyebrow">Salón &amp; delivery</span>
+    <h2>Ven o te lo llevamos</h2>
+    <p style="color:var(--mute);margin:10px 0 22px">Terraza y salón para quedarte, o tu pedido en casa.</p>
+    <p><b>Dirección</b> · Santa Cruz 1120, Traiguén</p>
+    <p><b>Apertura</b> · Jueves 19 de noviembre, desde las 16:00 hrs</p>
+    <p style="margin-top:20px"><a class="btn line" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Santa+Cruz+1120+Traigu%C3%A9n">Cómo llegar</a></p>
+  </div>
+  <div class="card"><h3>Delivery</h3><p>Pide por WhatsApp y recibe tu pedido en casa. Cuéntanos qué te apetece y te confirmamos al momento.</p>
+    <p style="margin-top:18px"><a class="btn" href="https://wa.me/56900000000?text=Hola%2C%20quiero%20hacer%20un%20pedido%20de%20delivery">Pedir por WhatsApp</a></p></div>
+</div></section>
+
+<section class="sec" id="reservas"><div class="wrap" style="max-width:620px">
+  <span class="eyebrow">Reservas</span>
+  <h2>Reserva tu mesa</h2>
+  <p class="sub">Rellena esto y nos llega por WhatsApp.</p>
+  <form class="form" id="f">
+    <label>Nombre<input name="n" required autocomplete="name"></label>
+    <label>Personas<select name="p"><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>Más de 6</option></select></label>
+    <label>Día y hora<input name="w" placeholder="Ej: viernes 20, 21:00"></label>
+    <button class="btn" type="submit">Reservar por WhatsApp</button>
+  </form>
+</div></section>
+
+<footer>Distrito Sushi · Street food and bar · Traiguén</footer>
+
+<div class="bar"><a href="#reservas">Reservar mesa</a></div>
+
+<script>
+// Cuenta atrás hasta la apertura (19/11/2026, 16:00, hora de Chile)
+(function(){
+  var t=new Date('2026-11-19T16:00:00-03:00').getTime();
+  function u(){
+    var s=Math.max(0,Math.floor((t-Date.now())/1000));
+    document.getElementById('d').textContent=Math.floor(s/86400);
+    document.getElementById('h').textContent=Math.floor(s%86400/3600);
+    document.getElementById('m').textContent=Math.floor(s%3600/60);
+    if(s===0){document.getElementById('count').style.display='none'}
+  }
+  u();setInterval(u,30000);
+})();
+// Formulario -> WhatsApp (cambia el número por el suyo, con 56 delante)
+document.getElementById('f').addEventListener('submit',function(e){
+  e.preventDefault();
+  var d=new FormData(e.target);
+  var msg='Hola, soy '+d.get('n')+'. Quiero reservar mesa para '+d.get('p')+' personas. '+(d.get('w')?'Día y hora: '+d.get('w')+'.':'');
+  window.open('https://wa.me/56900000000?text='+encodeURIComponent(msg),'_blank');
+});
+</script>
+</body>
+</html>
